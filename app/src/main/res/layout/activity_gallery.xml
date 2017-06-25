@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loDrawerLayout"
+    tools:context="com.example.android.weekendproject1.Menu">
+
+    <FrameLayout
+        android:id="@+id/loFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+                <ImageView
+                    android:id="@+id/ivPhotos"
+                    android:layout_width="500dp"
+                    android:layout_height="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+                <SeekBar
+                    android:id="@+id/sbScrollPictures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivPhotos"
+                    />
+                <TextView
+                    android:id="@+id/tvNoPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textSize="50dp"
+                    android:text="No Pictures Saved"
+                    android:layout_below="@+id/sbScrollPictures"/>
+
+            </RelativeLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lvMenus"
+        android:layout_gravity ="start"
+        android:layout_width="240dp"
+        android:entries="@array/menuList"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:background="@color/colorPrimary"
+
+        />
+</android.support.v4.widget.DrawerLayout>

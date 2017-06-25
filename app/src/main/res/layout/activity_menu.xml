@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loDrawerLayout"
+    tools:context="com.example.android.weekendproject1.Menu">
+
+    <FrameLayout
+        android:id="@+id/loFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="60dp">
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:layout_gravity="center"
+                android:textSize="30dp"/>
+
+            <Button
+                android:id="@+id/btnPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:layout_gravity="center"
+                android:onClick="DoThings"
+                />
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:layout_gravity="center"
+                android:onClick="DoThings"
+                />
+            <Button
+                android:id="@+id/btnGalery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galery"
+                android:layout_gravity="center"
+                android:onClick="DoThings"
+                />
+
+            <Button
+                android:id="@+id/btnInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Internet"
+                android:layout_gravity="center"
+                android:onClick="DoThings"
+                />
+
+
+            <TextView
+                android:id="@+id/tvLogInNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="You Must Create an Account and Log In to use this app"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <Button
+                android:layout_margin="50sp"
+                android:id="@+id/btnCreateLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:layout_gravity="center"
+                android:onClick="DoThings"
+                />
+            <Button
+                android:id="@+id/btnLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:layout_gravity="center"
+                android:onClick="DoThings"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lvMenus"
+        android:layout_gravity ="start"
+        android:layout_width="240dp"
+        android:entries="@array/menuList"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:background="@color/colorPrimary"
+
+        />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WeekendProject1</string>
+    <string name="title_activity_testing">Testing</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="menuList">
+        <item>Menu</item>
+        <item>Phone</item>
+        <item>Camera</item>
+        <item>Galery</item>
+        <item>Internet</item>
+        <item>Fun</item>
+    </string-array>
+
+
+
+</resources>

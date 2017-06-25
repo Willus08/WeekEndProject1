@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_gravity="start"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/loDrawerLayout"
+tools:context="com.example.android.weekendproject1.Menu">
+
+<FrameLayout
+    android:id="@+id/loFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="300sp"
+            android:layout_height="300sp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <Button
+            android:id="@+id/btnTake"
+            android:text="Take Picture"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSavePic"
+            android:onClick="TakePic"/>
+
+        <Button
+            android:id="@+id/btnSavePic"
+            android:text="Save"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPicture"
+            android:onClick="SavePic"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:text="Delete"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnTake"
+            android:onClick="DeletePic"/>
+    </RelativeLayout>
+</FrameLayout>
+
+<ListView
+    android:id="@+id/lvMenus"
+    android:layout_gravity ="start"
+    android:layout_width="240dp"
+    android:entries="@array/menuList"
+    android:layout_height="match_parent"
+    android:divider="@null"
+    android:background="@color/colorPrimary"
+
+    />
+</android.support.v4.widget.DrawerLayout>
